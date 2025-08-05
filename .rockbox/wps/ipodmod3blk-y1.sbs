@@ -1,0 +1,61 @@
+# Theme:ipodmod3blk-y1
+# Version:1.0
+# Device:ipod video
+# Adapted by: K4sum1
+# License: CC-BY-SA
+# Improved by OlsroFR (2024)
+# Ported by AkikoKumagara (2025)
+#
+# SBS File
+#
+
+#-- Status Bar Disabler
+%wd
+#
+#-- Title Bar Disabler
+%?Lt<|>
+#
+#-- Backdrop
+%X(Backdrop - SBS.bmp) 
+#
+#-- PreLoad Fonts
+%Fl(2,14-Ubuntu-M.fnt)
+%Fl(3,20-Cantarell-Bold.fnt)
+%Fl(4,18-Cantarell-Bold.fnt)
+#
+#-- Preloaded Images
+%xl(A,Disk Access Icons.bmp,0,0,8)
+%xl(B,battery.bmp,0,0,24)
+%xl(C,Hold Icon - SBS.bmp,0,0)
+%xl(D,Play & Pause Icons3 - SBS.bmp,0,0,2)
+#
+#-- Date Bar
+%V(133,4,200,21,3)%Vf(F4F4F4)%Vb(000000)
+%ac%cb %ce, %?cf<%cH:%cM|%cl:%cM>
+#
+#-- Disk Access/Play & Pause Icons Handler
+#%?lh<%Vd(a)|%Vd(b)>
+#
+#-- Shuffle
+%xl(K,Shuffle Icon - SBS.bmp,0,0)
+%V(44,10,21,18,1)
+%?ps<%xd(K)>
+#
+%xl(J,Playback Icons - SBS.bmp,0,0,5)
+%V(71,10,21,18,1)
+%?mm<|%xd(Ja)|%xd(Jb)|%xd(Jc)|%xd(Jd)>
+#
+#-- Play & Pause Icons
+%V(12,6,21,26,-)
+%?mp<|%xd(Da)|%xd(Db)||||||>
+#
+#-- Battery Icons
+%V(448,10,24,15,-)
+%?bp<%?bc<%t(1.0)%xd(Ba);%t(1.0)%xd(Bb)|%xd(Bc)>|%?bl<%xd(Bd)|%xd(Bd)|%xd(Be)|%xd(Bf)|%xd(Bg)|%xd(Bh)|%xd(Bi)|%xd(Bj)|%xd(Bk)|%xd(Bl)|%xd(Bm)|%xd(Bn)|%xd(Bo)|%xd(Bp)|%xd(Bq)|%xd(Br)|%xd(Bs)|%xd(Bt)|%xd(Bu)|%xd(Bv)|%xd(Bw)|%xd(Bx)>>
+#
+# Battery text
+%V(390,4,48,21,3)%Vf(F4F4F4)%Vb(000000)
+%ar%bl%%
+#
+#-- UI Viewport
+%Vi(-,0,31,480,328,4)%Vf(F4F4F4)%Vb(000000)

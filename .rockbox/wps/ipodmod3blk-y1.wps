@@ -1,0 +1,126 @@
+# Theme:ipodmod3blk-y1
+# Version:1.0
+# Device:ipod video
+# Adapted by: K4sum1
+# License: CC-BY-SA
+# Improved by OlsroFR (2024)
+# Ported by AkikoKumagara (2025)
+#
+# WPS File
+#
+
+# Hide The Status Bar
+%wd
+
+# Load Backdrop
+%X(wps_backdrop.bmp)
+
+# Preload Fonts
+%Fl(2,14-Ubuntu-M.fnt)
+%Fl(3,20-Cantarell-Bold.fnt)
+%Fl(4,18-Cantarell-Bold.fnt)
+
+# Preload Images
+#%xl(A,aa.bmp,0,0)
+%xl(B,battery.bmp,0,0,24)
+%xl(C,pb.bmp,0,0)
+%xl(D,pb_back.bmp,0,0)
+%xl(E,ps.bmp,0,0)
+%xl(F,pbl.bmp,0,0)
+%xl(G,pbr.bmp,444,0)
+%xl(H,Play & Pause Icons3 - SBS.bmp,0,0,2)
+%xl(I,seek.bmp,0,0,4)
+%xl(J,mute.bmp,0,0,2)
+%xl(K,vol.bmp,0,0)
+%xl(L,vol_back.bmp,0,0)
+%xl(M,Shuffle Icon - SBS.bmp,0,0)
+%xl(N,Playback Icons - WPS.bmp,0,0,5)
+%xl(O,Hold Icon - SBS.bmp,0,0)
+
+# Album Art Settings(align center center)
+%Cl(0,0,205,205,c,c)
+# Album Art
+%V(19,49,205,205,-)
+%?C<%Cd>
+
+# Battery
+%V(448,10,24,15,-)
+%?bp<%?bc<%t(1.0)%xd(Ba);%t(1.0)%xd(Bb)|%xd(Bc)>|%?bl<%xd(Bd)|%xd(Bd)|%xd(Be)|%xd(Bf)|%xd(Bg)|%xd(Bh)|%xd(Bi)|%xd(Bj)|%xd(Bk)|%xd(Bl)|%xd(Bm)|%xd(Bn)|%xd(Bo)|%xd(Bp)|%xd(Bq)|%xd(Br)|%xd(Bs)|%xd(Bt)|%xd(Bu)|%xd(Bv)|%xd(Bw)|%xd(Bx)>>
+#
+
+# Battery text
+%V(390,4,48,21,3)%Vf(F4F4F4)%Vb(000000)
+%ar%bl%%
+#
+
+#-- Hold Icon
+%V(8,8,11,15,-)%Vf(F4F4F4)%Vb(000000)
+%?mh<%xd(O)|%?mr<%xd(O)>>
+
+
+#-- Date Bar
+%V(133,4,200,21,3)%Vf(F4F4F4)%Vb(000000)
+%ac%cb %ce, %?cf<%cH:%cM|%cl:%cM>
+
+# Artist
+%V(240,84,231,27,4)#%Vf(F4F4F4)
+%al%s%?ia<%ia|%?d(2)<%d(2)|%Sx(Artist)>>
+# Title
+%V(242,45,231,30,3)#%Vf(F4F4F4)
+%al%s%?it<%s%it|%fn>
+# Album
+%V(240,108,231,27,4)#%Vf(F4F4F4)
+%al%s%?id<%id|%?d(1)<%d(1)|%Sx(Album)>>
+# Year
+%V(240,132,231,27,4)#%Vf(F4F4F4)
+%al%?iy<%iy>
+# Song Number In Playlist
+%V(240,171,75,20,4)
+%al%pp/%pe
+
+
+# Track Information
+%V(240,216,231,27,4)%Vf(F4F4F4)
+%s%al%fc
+%V(240,240,231,27,4)%Vf(F4F4F4)
+%s%al%fb kbps %(%?fv<vbr|cbr>%)
+
+
+# Song Current Time
+%V(20,336,86,21,4)
+%al%pc
+# Song Remaining Time
+%V(375,336,86,21,4)
+%ar%pt
+
+# Progress Bar
+# With a little hacking to make border look nice
+%V(17,320,448,17,-)
+%xd(F)
+%pb(4,0,442,17,C,backdrop,D,slider,E)
+%xd(G)
+
+# Play & Pause Icons
+%V(12,6,21,26,-)
+%?mp<|%xd(Ha)|%xd(Hb)||||||>
+
+# Repeat
+%V(231,290,21,17,-)
+%xd(N, %mm)
+# %?mm<%xd(Na)|%xd(Nb)|%xd(Nb)|%xd(Nb)|%xd(Nb)>
+
+# Shuffle
+%V(258,290,21,17,-)
+%?ps<%xd(M)>
+
+# Mute
+%V(285,290,21,20,-)
+%?pv<%xd(Jb)|%xd(Ja)|%xd(Ja)|%xd(Ja)>
+
+# Volume
+# With a little hacking to make border look nice
+%V(310,288,156,17,-)
+%pv(4,0,150,17,K,backdrop,L,slider,E)
+
+#-- UI Viewport
+%Vi(-,0,31,480,328,4)%Vf(F4F4F4)%Vb(000000)
